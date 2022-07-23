@@ -71,7 +71,6 @@ if __name__ == '__main__':
     parser.add_argument('--use_video', type=int, default=1, help="if use video")
     args = parser.parse_args()
 
-    # Initialize YOLOv7 object detector
     segmentor = pphumanseg(conf_thres=args.confThreshold)
     if args.use_video != 1:
         srcimg = cv2.imread(args.imgpath)
